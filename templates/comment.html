@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+    <title>Comments</title>
+</head>
+<body>
+    <h2>Leave a Comment</h2>
+    <form method="POST">
+        <div>
+            <input name="name">
+        </div>
+        <div>
+            Message:
+        </div>
+        <div>
+            <textarea name="message""></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <hr>
+    <h3>All Comments:</h3>
+    {% for name, message in comments %}
+        <p><b>{{ name }}:</b>{{ message}}</p>
+    {% endfor %}
+</body>
+</html>

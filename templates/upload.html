@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+    <title>Upload File</title>
+</head>
+<body>
+    <h2>Upload a ZIP File</h2>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <input type="file" name="file">
+        </div>
+        <div>
+            <input type="submit" name="Upload">
+        </div>
+    </form>
+</body>
+</html>

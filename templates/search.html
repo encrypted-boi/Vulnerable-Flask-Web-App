@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css' ) }}">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Search Page (Reflected XSS)</h2>
+    <div>
+        <form>
+            <input type="text" name="q" value="{{ query }}">
+            <input type="submit">
+        </form>
+    </div>
+    <p>You searched for: <b>{{ query }}</b></p>
+</body>
+</html>
